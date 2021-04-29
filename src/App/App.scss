@@ -1,3 +1,22 @@
 .App {
+  background-color: lightblue;
   text-align: center;
+  padding: 20px;
+}
+.header-title {
+  font-size: 64px;
+  margin: 100px 0 100px 0;
+}
+.shark-tank-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  border: black 5px solid;
+  width: 100%;
+  background-color: blue;
+  .student-card {
+    margin: 20px;
+    width: 15rem;
+  }
 }
