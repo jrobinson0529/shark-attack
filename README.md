@@ -1,4 +1,4 @@
-# React Template
+# Shark Attack
 
 **Use this template to get up and running quickly on projects.**
 
