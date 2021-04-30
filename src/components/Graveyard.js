@@ -1,16 +1,17 @@
 import React from 'react';
+import { AnimateGroup } from 'react-animation';
 import PropTypes from 'prop-types';
 import GraveStone from './GraveStone';
 
 function Graveyard({ deadStudents }) {
   return (
-    <div className='graveyard-container'>
+    <AnimateGroup className='graveyard-container' animation='bounce'>
       {deadStudents.map((studentObject) => <GraveStone
           key={studentObject.id}
           firstName={studentObject.firstName}
           lastName={studentObject.lastName}
          />)}
-    </div>
+    </AnimateGroup>
   );
 }
 Graveyard.propTypes = {

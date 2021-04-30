@@ -16,9 +16,10 @@ function App() {
       <header>
         <h1 className='header-title'>Welcome to the SharkTank</h1>
       </header>
-      <SharkTank liveStudents={liveStudents} setLiveStudents={setLiveStudents} setDeadStudents={setDeadStudents}/>
-        <h1 className='header-title'>The yard of death</h1>
-      <Graveyard deadStudents={deadStudents}/>
+      <main className='d-flex'>
+        <SharkTank liveStudents={liveStudents} setLiveStudents={setLiveStudents} setDeadStudents={setDeadStudents}/>
+        <Graveyard deadStudents={deadStudents}/>
+      </main>
     </div>
   );
 }

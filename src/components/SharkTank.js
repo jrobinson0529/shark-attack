@@ -14,7 +14,7 @@ function SharkTank({ liveStudents, setLiveStudents, setDeadStudents }) {
   return (
   <>
     <div className='shark-tank-container'>
-    <Button color='danger' onClick={handleSharkAttack}>SHARK ATTACK</Button>
+    {liveStudents.length > 0 ? <Button color='danger' onClick={handleSharkAttack}>SHARK ATTACK</Button> : ''}
       <AnimateGroup className='d-flex flex-wrap justify-content-between' animation="bounce">
       {liveStudents.map((studentObject) => <LiveStudent
           key={studentObject.id}

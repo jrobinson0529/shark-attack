@@ -1,6 +1,8 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Noto+Sans&display=swap');
 @import 'variables';
 
 body {
+  font-family: $mainFont;
   background-color: $favColor;
 }
