@@ -2,15 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Card, CardBody,
-  CardTitle, CardSubtitle
+  CardTitle
 } from 'reactstrap';
 
 const LiveStudent = ({ firstName, lastName }) => (
     <div>
-      <Card className='student-card'>
+      <Card className='student-card y x'>
         <CardBody>
           <CardTitle tag="h5">{firstName} {lastName}</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted">Student of the Sharks</CardSubtitle>
         </CardBody>
       </Card>
     </div>
