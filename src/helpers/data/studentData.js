@@ -128,13 +128,15 @@ const dearlyBeloved = () => {
   const deadStudentsArray = students.filter((obj) => obj.isDead);
   return deadStudentsArray;
 };
-const followTheLight = () => {
-  const ranIndex = Math.floor(Math.random() * students.length);
-  students[ranIndex].isDead = true;
+const followTheLight = (arr) => {
+  const studentsArr = arr;
+  const ranIndex = Math.floor(Math.random() * studentsArr.length);
+  if (studentsArr[ranIndex].isDead === false) {
+    studentsArr[ranIndex].isDead = true;
+  }
 };
 export {
   dearlyBeloved,
   livingStudents,
   followTheLight,
-  students
 };

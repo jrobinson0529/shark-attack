@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from 'react';
+import Graveyard from '../components/Graveyard';
 import SharkTank from '../components/SharkTank';
-import { livingStudents } from '../helpers/data/studentData';
+import { dearlyBeloved, livingStudents } from '../helpers/data/studentData';
 import './App.scss';
 
 function App() {
   const [liveStudents, setLiveStudents] = useState([]);
+  const [deadStudents, setDeadStudents] = useState([]);
   useEffect(() => {
     setLiveStudents(livingStudents());
+    setDeadStudents(dearlyBeloved());
   }, []);
-  console.warn(liveStudents);
   return (
     <div className='App'>
       <header>
         <h1 className='header-title'>Welcome to the SharkTank</h1>
       </header>
-      <SharkTank liveStudents={liveStudents}/>
+      <SharkTank liveStudents={liveStudents} setLiveStudents={setLiveStudents} setDeadStudents={setDeadStudents}/>
+        <h1 className='header-title'>The yard of death</h1>
+      <Graveyard deadStudents={deadStudents}/>
     </div>
   );
 }
